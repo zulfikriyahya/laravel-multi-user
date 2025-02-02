@@ -16,22 +16,32 @@ class DatabaseSeeder extends Seeder
         $users =
             [
                 [
+                    'name' => 'Administrator',
+                    'email' => 'admin@admin.com',
+                    'role' => 'admin',
+                    'password' => bcrypt('password'),
+                    'email_verified_at' => now(),
+                ],
+                [
                     'name' => 'Kang Operator',
                     'email' => 'operator@admin.com',
                     'role' => 'operator',
                     'password' => bcrypt('password'),
+                    'email_verified_at' => now(),
                 ],
                 [
                     'name' => 'Kang Keuangan',
                     'email' => 'keuangan@admin.com',
                     'role' => 'keuangan',
                     'password' => bcrypt('password'),
+                    'email_verified_at' => now(),
                 ],
                 [
                     'name' => 'Kang Marketing',
                     'email' => 'marketing@admin.com',
                     'role' => 'marketing',
                     'password' => bcrypt('password'),
+                    'email_verified_at' => now(),
                 ]
             ];
         foreach ($users as $user => $value) {

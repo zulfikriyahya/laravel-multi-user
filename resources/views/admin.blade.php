@@ -16,13 +16,13 @@
     <div><a href="/logout" class="btn btn-sm btn-secondary">Logout >></a></div>
     <div class="card mt-3">
       <ul class="list-group list-group-flush">
-        @if (Auth::user()->role == 'operator')
+        @if (Auth::user()->role == 'operator' || Auth::user()->role == 'admin')
         <li class="list-group-item">Menu Operator</li>
         @endif
-        @if (Auth::user()->role == 'keuangan')
+        @if (Auth::user()->role == 'keuangan' || Auth::user()->role == 'admin')
         <li class="list-group-item">Menu Keuangan</li>
         @endif
-        @if (Auth::user()->role == 'marketing')
+        @if (Auth::user()->role == 'marketing' || Auth::user()->role == 'admin')
         <li class="list-group-item">Menu Marketing</li>
         @endif
       </ul>
